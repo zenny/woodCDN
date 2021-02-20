@@ -72,6 +72,15 @@ chown -R cdn:cdn /opt/woodCDN/
 cd /opt/;su cdn
 git clone https://github.com/Ne00n/woodCDN.git
 exit; chmod 775 -R /opt/woodCDN; chmod 750 /opt/woodCDN/certs
+#DNS
+#Make sure to check for the latest release!
+wget https://golang.org/dl/go1.16.linux-amd64.tar.gz
+tar -C /usr/local -xzf go*.linux-amd64.tar.gz
+echo -e "export PATH=$PATH:/usr/local/go/bin" > /etc/profile
+go version
+su cdn; cd /home/cdn
+git clone https://github.com/Ne00n/geodns
+cd geodns; ./build.sh
 ```
 
 You can get maxmind databases [here](https://dev.maxmind.com/geoip/geoip2/geolite2/)<br />
