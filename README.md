@@ -77,8 +77,8 @@ exit; chmod 775 -R /opt/woodCDN; chmod 750 /opt/woodCDN/certs
 You can get maxmind databases [here](https://dev.maxmind.com/geoip/geoip2/geolite2/)<br />
 Get & Put<br />
 ```
-GeoLite2-ASN.mmdb                                                                                    
-GeoLite2-City.mmdb                                                                              
+GeoLite2-ASN.mmdb
+GeoLite2-City.mmdb                                    
 GeoLite2-Country.mmdb
 ```
 
