@@ -12,7 +12,7 @@
 
 **Software**<br />
 - Nginx as proxy/caching device
-- rqlite to store the vhosts/domains/pops
+- [rqlite](https://github.com/rqlite/rqlite) to store the vhosts/domains/pops
 - [geodns](https://github.com/abh/geodns) as nameserver + geo
 - python3 for syncing/generating the vhosts
 - python3 to add/edit/delete vhosts and settings
@@ -74,8 +74,15 @@ git clone https://github.com/Ne00n/woodCDN.git
 exit; chmod 775 -R /opt/woodCDN; chmod 750 /opt/woodCDN/certs
 ```
 
-You can get the free city lite database [here](https://dev.maxmind.com/geoip/geoip2/geolite2/)<br />
-Put the Database on each dns node in /opt/woodCDN<br />
+You can get maxmind databases [here](https://dev.maxmind.com/geoip/geoip2/geolite2/)<br />
+Get & Put<br />
+```
+GeoLite2-ASN.mmdb                                                                                    
+GeoLite2-City.mmdb                                                                              
+GeoLite2-Country.mmdb
+```
+
+Into /usr/share/GeoIP/ on each dns node<br />
 Afterwards you should be able to run on that on any node but just once<br />
 ```
 python3 cli.py init
