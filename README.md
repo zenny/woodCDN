@@ -76,7 +76,7 @@ exit; chmod 775 -R /opt/woodCDN; chmod 750 /opt/woodCDN/certs
 #Make sure to check for the latest release!
 wget https://golang.org/dl/go1.16.linux-amd64.tar.gz
 tar -C /usr/local -xzf go*.linux-amd64.tar.gz
-echo -e "export PATH=$PATH:/usr/local/go/bin" > /etc/profile
+echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
 go version
 su cdn; cd /home/cdn
 git clone https://github.com/Ne00n/geodns
